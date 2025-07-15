@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharat Intern</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="proj.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+</head>
+<style>
+  
+.rectangle {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+           
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem;
+            position: relative;
+            top:80px;
+            
+        }
+
+        .one {
+            flex: 1;
+            max-width: 40%;
+            z-index: 2;
+        }
+
+        .one h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #2c5aa0;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .one p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .one button {
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+            padding: 0.8rem 2rem;
+            font-weight: 600;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .one button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .stats-container {
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+     
+        #freedemo {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            width: 350px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            animation: slideInFromRight 1s ease-out, float 3s ease-in-out infinite;
+            transform-origin: center;
+            margin-bottom: 2rem;
+            position: relative;
+            top:50px;
+        }
+
+        #freedemo h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        #freedemo p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        #freedemo button {
+            background: rgba(255,255,255,0.2);
+            border: 2px solid white;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            
+        }
+
+        #freedemo button:hover {
+            background: white;
+            color: #667eea;
+            transform: scale(1.05);
+        }
+
+        .stats-cards {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+    
+        #students {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            width: 170px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: slideInFromBottom 1.2s ease-out, pulse 2s ease-in-out infinite;
+            position: relative;
+            top: 30px;
+        }
+
+        #students i {
+            display: block;
+            margin-bottom: 1rem;
+            animation: spin 2s linear infinite;
+        }
+
+        #students h3 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2c5aa0;
+            margin-bottom: 0.5rem;
+            animation: countUp 2s ease-out;
+        }
+
+        #students::after {
+            content: "Happy Students";
+            color: #666;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+     
+        #percentage {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            width: 170px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: slideInFromBottom 1.4s ease-out, bounce 2.5s ease-in-out infinite;
+            position: relative;
+            top:30px;
+        }
+
+        #percentage i {
+            display: block;
+            margin-bottom: 1rem;
+            animation: wobble 1.5s ease-in-out infinite;
+        }
+
+        #percentage h3 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2c5aa0;
+            margin-bottom: 0.5rem;
+            animation: countUp 2.5s ease-out;
+        }
+
+        #percentage::after {
+            content: "Success Rate";
+            color: #666;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+     
+        @keyframes slideInFromRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromBottom {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            25% { transform: translateY(-5px); }
+            50% { transform: translateY(0); }
+            75% { transform: translateY(-3px); }
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes wobble {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+        }
+
+        @keyframes countUp {
+            from { 
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to { 
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+    
+        #freedemo:hover {
+            animation-play-state: paused;
+            transform: scale(1.02);
+        }
+
+        #students:hover {
+            animation-play-state: paused;
+            transform: scale(1.02);
+        }
+
+        #percentage:hover {
+            animation-play-state: paused;
+            transform: scale(1.02);
+        }
+
+     
+        @media (max-width: 768px) {
+            .rectangle {
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem;
+            }
+            
+            .one {
+                max-width: 100%;
+                margin-bottom: 2rem;
+            }
+            
+            .one h1 {
+                font-size: 2.5rem;
+            }
+            
+            .stats-container {
+                position: static;
+                transform: none;
+                width: 100%;
+                margin-top: 2rem;
+            }
+            
+            #freedemo {
+                width: 100%;
+                max-width: 350px;
+                margin: 0 auto 2rem;
+            }
+            
+            .stats-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            #students, #percentage {
+                width: 250px;
+                margin: 0.5rem 0;
+            }
+        }
+
+
+</style>
+<body>
+
+<header>
+<nav class="navbar bg-body-tertiary fixed-top navbar-expand-lg ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="c248e10b-4c99-4f48-9bbe-85ae375d75a6.jpg" alt="Logo" width="25" class="d-inline-block ">
+      VK Academy
+      <p>Innovation in education</p>
+</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link "  href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+                <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+      <div class="btn-container">
+                    <button type="button" class="btn " >Enroll Now</button>
+            <button type="button" class="btn ">Free Demo</button>
+      </div>
+
+    </div>
+</div>
+</nav>
+</header>
+<main>
+        <div class="container-fluid rectangle">
+            <div class="one">
+                <h1>Transform <br> Your Future <br>With VK <br>Academy</h1>
+                <p>From school excellence to professional mastery. 
+                Join<br> thousands of successful students who chose innovation<br>
+                over ordinary education.</p>
+                <button class="btn btn-info"><i class="bi bi-book"></i> Explore Programs</button>
+                <button class="btn btn-outline-dark"><i class="bi bi-rocket"></i> Watch Demo</button>
+            </div>
+            
+            <div class="stats-container">
+                <div id="freedemo">
+                    <h3>FREE 5-Day Demo</h3>
+                    <p>Experience our revolutionary teaching methods</p>
+                    <button class="btn btn-outline-light">Join Now</button>
+                </div>
+                
+                <div class="stats-cards">
+                    <div id="students">
+                        <i class="bi bi-patch-check" style="color: orange; font-size: 2rem;"></i>
+                        <h3>15K+</h3>
+                    </div>
+                    
+                    <div id="percentage">
+                        <i class="bi bi-mortarboard" style="color: orange; font-size: 2rem;"></i>
+                        <h3>98%</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+  <div class="hero">
+  <div class="container">
+    <button class="btn btn-orange mb-3">
+      <i class="bi bi-mortarboard-fill me-2"></i>Our Programs
+    </button>
+    <h1 class="text-center">
+      Choose Your </br><span class="highlight-text">Path to Success</span>
+    </h1>
+    <p class="mt-3 text-center">
+      From foundational learning to professional mastery, discover programs designed to transform your educational journey
+    </p>
+  </div>
+</div>
+<section class="py-5" data-aos="fade-up">
+  <div class="container">
+
+ 
+    <div class="text-center mb-5">
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <div class="bg-primary text-white rounded-circle p-2">
+          <i class="bi bi-book fs-4"></i>
+        </div>
+        <h2 class="fw-bold mb-0">School Foundation</h2>
+      </div>
+      <div style="width: 180px; height: 3px; background-color: #f88b4b; margin: 10px auto;"></div>
+    </div>
+
+ 
+    <div class="row g-4 justify-content-center">
+
+  
+      <div class="col-md-6 col-lg-5" data-aos="zoom-in">
+        <div class="card shadow border-0 h-100">
+          <div class="bg-primary text-white p-3 rounded-top">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge bg-light text-dark">Foundation</span>
+              <span><i class="bi bi-people-fill me-1"></i> 2,500+</span>
+            </div>
+            <h4 class="mt-3 mb-1">Class 9th & 10th</h4>
+            <small><i class="bi bi-star-fill text-warning"></i> 4.9 rating</small>
+          </div>
+          <div class="card-body">
+            <p>Complete foundation building across all subjects</p>
+            <p class="fw-bold mb-1">Key Subjects:</p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge bg-secondary-subtle text-dark">Mathematics</span>
+              <span class="badge bg-secondary-subtle text-dark">Science</span>
+              <span class="badge bg-secondary-subtle text-dark">English</span>
+              <span class="badge bg-secondary-subtle text-dark">+1 more</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-6 col-lg-5" data-aos="zoom-in">
+        <div class="card shadow border-0 h-100">
+          <div class="bg-primary text-white p-3 rounded-top">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge bg-light text-dark">Advanced</span>
+              <span><i class="bi bi-people-fill me-1"></i> 3,200+</span>
+            </div>
+            <h4 class="mt-3 mb-1">Class 11th & 12th</h4>
+            <small><i class="bi bi-star-fill text-warning"></i> 4.8 rating</small>
+          </div>
+          <div class="card-body">
+            <p>Advanced preparation for competitive exams</p>
+            <p class="fw-bold mb-1">Key Subjects:</p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge bg-secondary-subtle text-dark ">Physics</span>
+              <span class="badge bg-secondary-subtle text-dark">Chemistry</span>
+              <span class="badge bg-secondary-subtle text-dark">Mathematics</span>
+              <span class="badge bg-secondary-subtle text-dark">+1 more</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="py-5 " data-aos="fade-up">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <div class="bg-primary bg-gradient text-white rounded-circle p-2">
+          <i class="bi bi-mortarboard-fill fs-4"></i>
+        </div>
+        <h2 class="fw-bold mb-0">Undergraduate Excellence</h2>
+      </div>
+      <div style="width: 220px; height: 3px; background-color: #f88b4b; margin: 10px auto;"></div>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+
+    
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+        <div class="card shadow border-0 h-100">
+          <div class="p-3 rounded-top text-white" style="background: linear-gradient(135deg, #d9e2eb, #66ccff);">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge bg-light text-dark">Science</span>
+              <span><i class="bi bi-people-fill me-1"></i> 1,800+</span>
+            </div>
+            <h5 class="mt-3 mb-1 fw-bold">BSc & MSc Programs</h5>
+            <small><i class="bi bi-star-fill text-warning"></i> 4.7 rating</small>
+          </div>
+          <div class="card-body bg-light-subtle">
+            <p>Comprehensive science education</p>
+            <p class="fw-bold mb-1">Key Subjects:</p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge bg-secondary-subtle text-dark">Biology</span>
+              <span class="badge bg-secondary-subtle text-dark">Chemistry</span>
+              <span class="badge bg-secondary-subtle text-dark">Physics</span>
+              <span class="badge bg-secondary-subtle text-dark">+1 more</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+        <div class="card shadow border-0 h-100">
+          <div class="p-3 rounded-top text-white" style="background: linear-gradient(135deg, #d9e2eb, #66ccff);">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge bg-light text-dark">Tech</span>
+              <span><i class="bi bi-people-fill me-1"></i> 2,100+</span>
+            </div>
+            <h5 class="mt-3 mb-1 fw-bold">BCA & MCA</h5>
+            <small><i class="bi bi-star-fill text-warning"></i> 4.9 rating</small>
+          </div>
+          <div class="card-body bg-light-subtle">
+            <p>Technology and computer applications</p>
+            <p class="fw-bold mb-1">Key Subjects:</p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge bg-secondary-subtle text-dark">Programming</span>
+              <span class="badge bg-secondary-subtle text-dark">Database</span>
+              <span class="badge bg-secondary-subtle text-dark">Networks</span>
+              <span class="badge bg-secondary-subtle text-dark">+1 more</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+        <div class="card shadow border-0 h-100">
+          <div class="p-3 rounded-top text-white" style="background: linear-gradient(135deg, #d9e2eb, #66ccff);">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge bg-light text-dark">Business</span>
+              <span><i class="bi bi-people-fill me-1"></i> 1,500+</span>
+            </div>
+            <h5 class="mt-3 mb-1 fw-bold">B.Com & M.Com</h5>
+            <small><i class="bi bi-star-fill text-warning"></i> 4.6 rating</small>
+          </div>
+          <div class="card-body bg-light-subtle">
+            <p>Business and commerce specialization</p>
+            <p class="fw-bold mb-1">Key Subjects:</p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge bg-secondary-subtle text-dark">Accounting</span>
+              <span class="badge bg-secondary-subtle text-dark">Finance</span>
+              <span class="badge bg-secondary-subtle text-dark">Economics</span>
+              <span class="badge bg-secondary-subtle text-dark">+1 more</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="py-5" data-aos="fade-up">
+  <div class="container">
+
+ 
+    <div class="text-center mb-5" >
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <div class="bg-warning bg-gradient text-white rounded-circle p-2">
+          <i class="bi bi-trophy-fill fs-4"></i>
+        </div>
+        <h2 class="fw-bold mb-0">Professional Mastery</h2>
+      </div>
+      <div style="width: 200px; height: 3px; background-color: #f88b4b; margin: 10px auto;"></div>
+    </div>
+
+  
+    <div class="row g-4 justify-content-center">
+
+      
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+        <div class="card shadow border-0 h-100">
+          <div class="p-3 text-white rounded-top" style="background: linear-gradient(135deg, #ff7e2a, #ffa94d);">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge bg-light text-dark">Medical</span>
+              <span><i class="bi bi-people-fill me-1"></i> 800+</span>
+            </div>
+            <h5 class="mt-3 mb-1 fw-bold">B.Pharma</h5>
+            <small><i class="bi bi-star-fill text-warning"></i> 4.8 rating</small>
+          </div>
+          <div class="card-body bg-light-subtle">
+            <p>Pharmaceutical sciences and drug development</p>
+            <p class="fw-bold mb-1">Key Subjects:</p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge bg-secondary-subtle text-dark">Pharmacology</span>
+              <span class="badge bg-secondary-subtle text-dark">Drug Development</span>
+              <span class="badge bg-secondary-subtle text-dark">Clinical Research</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+        <div class="card shadow border-0 h-100">
+          <div class="p-3 text-white rounded-top" style="background: linear-gradient(135deg, #ff7e2a, #ffa94d);">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge bg-light text-dark">Management</span>
+              <span><i class="bi bi-people-fill me-1"></i> 1,200+</span>
+            </div>
+            <h5 class="mt-3 mb-1 fw-bold">MBA Programs</h5>
+            <small><i class="bi bi-star-fill text-warning"></i> 4.9 rating</small>
+          </div>
+          <div class="card-body bg-light-subtle">
+            <p>Master of Business Administration</p>
+            <p class="fw-bold mb-1">Key Subjects:</p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge bg-secondary-subtle text-dark">Management</span>
+              <span class="badge bg-secondary-subtle text-dark">Marketing</span>
+              <span class="badge bg-secondary-subtle text-dark">Finance</span>
+              <span class="badge bg-secondary-subtle text-dark">+1 more</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+        <div class="card shadow border-0 h-100">
+          <div class="p-3 text-white rounded-top" style="background: linear-gradient(135deg, #ff7e2a, #ffa94d);">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge bg-light text-dark">Engineering</span>
+              <span><i class="bi bi-people-fill me-1"></i> 2,800+</span>
+            </div>
+            <h5 class="mt-3 mb-1 fw-bold">B.Tech Engineering</h5>
+            <small><i class="bi bi-star-fill text-warning"></i> 4.7 rating</small>
+          </div>
+          <div class="card-body bg-light-subtle">
+            <p>Engineering mathematics and technical skills</p>
+            <p class="fw-bold mb-1">Key Subjects:</p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge bg-secondary-subtle text-dark">M1</span>
+              <span class="badge bg-secondary-subtle text-dark">M2</span>
+              <span class="badge bg-secondary-subtle text-dark">M3</span>
+              <span class="badge bg-secondary-subtle text-dark">+1 more</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="py-5" style="background: linear-gradient(to right, #003973, #005fa3);" data-aos="zoom-in">
+  <div class="container text-center text-white">
+
+    <div class="mb-4 d-flex justify-content-center align-items-center gap-2" data-aos="fade-down">
+      
+      <h2 class="fw-bold display-6 mb-0">🎉Start Your Journey with <span class="text-warning">FREE Demo</span><br>Classes!</h2>
+    </div>
+
+    <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">
+      Experience our innovative teaching methodology for 5 days absolutely free.<br>
+      Join over <strong>15,000</strong> successful students who trusted VK Academy.
+    </p>
+
+    <div class="d-flex justify-content-center gap-3 flex-wrap" data-aos="fade-up" data-aos-delay="200">
+      <a href="#demo" class="btn btn-light btn-lg px-4 py-2 shadow" style="transition: transform 0.3s ease;" 
+         onmouseover="this.style.transform='scale(1.05)'" 
+         onmouseout="this.style.transform='scale(1)'">
+        <i class="bi bi-laptop"></i> Start Free Demo
+      </a>
+      <a href="#programs" class="btn btn-outline-light btn-lg px-4 py-2" style="transition: transform 0.3s ease;" 
+         onmouseover="this.style.transform='scale(1.05)'" 
+         onmouseout="this.style.transform='scale(1)'">
+        View All Programs
+      </a>
+    </div>
+
+  </div>
+</section>
+
+   </main>
+   <footer class="text-white pt-5 pb-3 border-top" style="background: linear-gradient(to right, #00204a, #00509e);">
+  <div class="container">
+    <div class="row gy-5">
+
+     
+      <div class="col-lg-5 col-md-6" data-aos="fade-right">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <img src="c248e10b-4c99-4f48-9bbe-85ae375d75a6.jpg" alt="VK Logo" width="45" height="45" />
+          <div>
+            <h4 class="fw-bold mb-0">VK Academy</h4>
+            <small>Innovation in Education</small>
+          </div>
+        </div>
+        <p>Transforming education through innovation, technology, and personalized learning. Join our community of 15,000+ successful students.</p>
+        <p class="mb-2">
+          <i class="bi bi-star-fill text-warning"></i> <strong>4.9/5 Rating</strong>
+          &nbsp;&nbsp;
+          <i class="bi bi-heart-fill text-danger"></i> <strong>15K+ Students</strong>
+        </p>
+       
+        <div class="d-flex gap-3 fs-5">
+          <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+   
+      <div class="col-lg-3 col-md-6" data-aos="fade-up">
+        <h5 class="fw-bold mb-3 border-bottom border-warning border-3 pb-1 d-inline-block">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none d-block py-1">All Courses</a></li>
+          <li><a href="#" class="text-white text-decoration-none d-block py-1">Free Demo Classes</a></li>
+          <li><a href="#" class="text-white text-decoration-none d-block py-1">About Us</a></li>
+          <li><a href="#" class="text-white text-decoration-none d-block py-1">Success Stories</a></li>
+          <li><a href="#" class="text-white text-decoration-none d-block py-1">Contact</a></li>
+          <li><a href="#" class="text-white text-decoration-none d-block py-1">Student Portal</a></li>
+        </ul>
+      </div>
+
+     
+      <div class="col-lg-4 col-md-12" data-aos="fade-left">
+        <h5 class="fw-bold mb-3 border-bottom border-warning border-3 pb-1 d-inline-block">Get in Touch</h5>
+        <div class="mb-3">
+          <i class="bi bi-telephone-fill me-2"></i>
+          <strong>Call Us</strong><br>
+          <span class="ms-1">+91 98765 43210<br>Mon-Fri, 10AM–10PM</span>
+        </div>
+        <div class="mb-3">
+          <i class="bi bi-envelope-fill me-2"></i>
+          <strong>Email Us</strong><br>
+          <span class="ms-1">info@vkacademy.edu<br><small>Quick response guaranteed</small></span>
+        </div>
+        <div class="mb-4">
+          <i class="bi bi-geo-alt-fill me-2"></i>
+          <strong>Visit Us</strong><br>
+          <span class="ms-1">VK Academy Campus<br>Education City, Innovation Hub</span>
+        </div>
+
+      
+      <div class="p-3 rounded shadow-sm" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(5px);">
+  <h6 class="mb-1 fw-bold text-white">24/7 Student Support</h6>
+  <p class="mb-2 text-white">Need immediate help?</p>
+  <a href="#" class="btn btn-danger btn-sm">
+    <i class="bi bi-exclamation-triangle-fill"></i> Emergency Help
+  </a>
+</div>
+
+      </div>
+
+    </div>
+    <hr class="border-light mt-5" />
+    <p class="text-center mb-0 pb-3 small">© 2024 VK Academy. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>

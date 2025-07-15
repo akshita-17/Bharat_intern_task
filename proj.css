@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container-fluid  p{
+    font-size: x-small;
+ 
+    color:rgb(15, 53, 188);
+
+}
+.navbar-collapse a:hover{
+    text-decoration: underline  orange;
+    color:rgb(0, 179, 255);
+    
+}
+.container h1{
+    font-weight: bold;
+}
+.btn{
+    
+   margin:6px;
+
+}
+.btn-container{
+    position: absolute;
+    right:20px;
+    
+}
+.rectangle h1{
+    background: -webkit-linear-gradient( rgb(15, 53, 188), rgb(94, 170, 211));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    font-size: 50px;
+
+}
+.btn:hover{
+    color: white;
+    background-image: linear-gradient(to bottom right, rgb(15, 53, 188), rgb(94, 170, 211));
+    transform:scale(1.1);
+   
+}
+.btn-info{
+    
+    background-image: linear-gradient(to bottom right, rgb(15, 53, 188), rgb(94, 170, 211));
+    font-weight: bold ;
+    color:whitesmoke;
+
+}
+.btn-outline-light{
+    color:black;
+    border:2px solid black;
+}
+.btn-info:hover{
+    transform: scale(1.1);
+}
+i{
+    margin:6px;
+}
+
+.rectangle{
+    height:600px;
+    background-color: rgb(219, 244, 248);
+    
+    
+}
+
+
+.one h1{
+    font-weight: bold;
+    font-size: 60px;
+}
+.one p{
+ font-size: medium;
+}
+#freedemo{
+height:200px;
+width: 500px;
+background-image: linear-gradient(to bottom right, rgb(15, 53, 188), rgb(94, 170, 211));
+border-radius: 5px;
+
+
+}
+#freedemo p{
+    color: white;
+    
+}
+#freedemo h3{
+    color: white;
+}
+#students{
+    height:280px;
+    width:230px;
+    border:2px solid rgb(162, 210, 233);
+    background-color: white;
+    box-shadow:2px 2px 10px rgba(0, 0,rgb(122, 164, 226), 0.3);
+
+    border-radius:5px;
+    text-align: center;
+    padding-top:25px;
+    
+}
+#percentage{
+    height:280px;
+    width:230px;
+    border:2px solid rgb(162, 210, 233);
+    background-color: white;
+    border-radius:5px;
+    text-align: center;
+    padding-top:25px;
+    
+}
+#students:hover{
+    transform: scale(1.05);
+}
+#percentage:hover{
+    transform: scale(1.05);
+}
+.hero{
+    padding: 100px 0;
+    
+}
+.hero h1{
+    background: -webkit-linear-gradient( rgb(15, 53, 188), rgb(94, 170, 211));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    font-weight: bold;
+    font-size: 70px;
+}
+
+.hero button{
+     margin-left: 42%;
+     background-image: linear-gradient(to bottom right, rgb(249, 144, 58), rgb(237, 199, 128));
+}
+.hero p{
+    color: rgb(23, 53, 108);
+}
+.bg-primary{
+      background: -webkit-linear-gradient( rgb(4, 28, 150), rgb(94, 170, 211));
+}
+footer{
+    margin-top: 50px;
+}
